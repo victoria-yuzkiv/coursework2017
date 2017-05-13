@@ -1,4 +1,5 @@
 from pytvdbapi import api
+
 db = api.TVDB("1D6897F57A08B0BA")
 
 
@@ -103,3 +104,6 @@ def banner():
     banner = show.banner_objects[0]
     print(banner.banner_url)
     print(banner.Language)
+
+
+actors()
