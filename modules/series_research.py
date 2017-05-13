@@ -16,7 +16,8 @@ class SeriesResearch:
 
         :param length: the length of a created array.
         """
-        self.allseries = AnArray(length)
+        self.length = length
+        self.allseries = AnArray(self.length)
 
     def get_item(self, index):
         """
@@ -35,6 +36,14 @@ class SeriesResearch:
         :param value: the value of the element.
         """
         self.allseries.__setitem__(index, value)
+
+    def find_len(self):
+        """
+        Returns the length of the array.
+
+        :return: the size of the array.
+        """
+        return self.allseries.__len__()
 
     def get_actors(self, index):
         """

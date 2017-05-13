@@ -1,23 +1,38 @@
 from modules.work_with_a_file import WorkWithAFile
 from modules.series_research import SeriesResearch
-from modules.an_array import AnArray
-
-# a = WorkWithAFile("ratings.txt")
-# a1 = a.open_file()
-# print(a.make_list(a1))
 
 
-def popular_actors():
-    pass
+# in progress (it's 4th stage)
 
+class MainResearch:
 
-def the_earliest_series():
-    pass
+    def __init__(self):
 
+        file = WorkWithAFile("ratings.txt")
+        file1 = file.open_file()
+        my_lst = file.make_list(file1)
+        self.series = SeriesResearch(len(my_lst))
+        for i in range(self.series.find_len()):
+            self.series.set_item(i, my_lst[i])
 
-def series_names():
-    pass
+    def __str__(self):
+        for i in range(self.series.find_len()):
+            print(self.series.get_item(i))
+
+    def popular_actors(self):
+        pass
+
+    def series_seasons(self):
+        pass
+
+    def series_names(self):
+        pass
 
 
 def main():
-    pass
+
+    series = MainResearch()
+    print(series)
+
+
+main()
