@@ -118,12 +118,16 @@ def main():
     save_info(sorted(actors_list, key=lambda x: x[1], reverse=True), "popular_actors.txt")
 
     # seasons
+    average = 0
     allseasons = series.series_seasons()
     save_info(sorted(allseasons.items(), key=lambda x: x[1], reverse=True), "series_seasons.txt")
+    for key, val in allseasons.items():
+        average += val
 
     # titles
     alltitles = series.series_titles()
     save_info(sorted(alltitles.items(), key=lambda x: x[1], reverse=True), "series_titles.txt")
+    return int(average / 47)
 
 
-main()
+print(main())
