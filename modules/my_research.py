@@ -130,4 +130,4 @@ def main():
     return int(average / 47)
 
 
-print(main())
+main()
